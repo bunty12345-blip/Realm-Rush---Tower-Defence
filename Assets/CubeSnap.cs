@@ -16,7 +16,9 @@ public class CubeSnap : MonoBehaviour {
         transform.position = new Vector3(snapPOS.x, 0f, snapPOS.z);
 
         textMesh = GetComponentInChildren<TextMesh>();
-        textMesh.text = snapPOS.x/gridSize + "," + snapPOS.z/gridSize ;
+        string labelText = snapPOS.x / gridSize + "," + snapPOS.z / gridSize;
+        textMesh.text = labelText;
+        gameObject.name = labelText;
 
 
      }
