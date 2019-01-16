@@ -5,6 +5,7 @@ using UnityEngine;
 public class Waypoint : MonoBehaviour {
 
     [SerializeField] Color exploredColor; //put set color in update todo yourself
+
     //public ok as it is a data class ..needs understanding
     public bool isExplored = false;
     public Waypoint exploredFrom;
