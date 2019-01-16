@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Waypoint : MonoBehaviour {
-    
+
+    [SerializeField] Color exploredColor; //put set color in update todo yourself
+    //public ok as it is a data class ..needs understanding
     public bool isExplored = false;
+    public Waypoint exploredFrom;
+ 
 
     Vector2Int gridPos;
 
@@ -26,5 +30,11 @@ public class Waypoint : MonoBehaviour {
     {
         MeshRenderer topMeshRenderer = transform.Find("Top").GetComponent<MeshRenderer>();
         topMeshRenderer.material.color = color;
+    }
+    
+    // Update is called once per frame
+    void Update()
+    {
+       
     }
 }
